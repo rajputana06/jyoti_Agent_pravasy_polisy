@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <title>Jyoti Agent | Legal Agreement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* Background image with dark overlay */
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        /* Main app container */
+        .app {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0,0,0,0.4);
+            backdrop-filter: blur(2px);
+        }
+
+        /* Header with logo */
+        .header {
+            padding: 12px 20px;
+            margin: 8px 16px 0 16px;
+            background: rgba(0,0,0,0.55);
+            border-radius: 60px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 0 20px rgba(0,255,255,0.25);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 40px;
+            overflow: hidden;
+            background: #2c3e50;
+            flex-shrink: 0;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .company-name {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.8px;
+            text-shadow: 0 0 12px rgba(0,255,255,0.6);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Scrollable glass card */
+        .content-wrapper {
+            flex: 1;
+            margin: 12px 16px;
+            border-radius: 32px;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+            background: rgba(0,0,0,0.4);
+        }
+        .scroll-area {
+            height: 100%;
+            overflow-y: auto;
+            padding: 24px;
+            scroll-behavior: smooth;
+        }
+
+        /* Section styling */
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #00e5ff;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        .section-text {
+            font-size: 13.5px;
+            line-height: 1.5;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 16px;
+            white-space: pre-line;
+        }
+        .divider {
+            height: 1px;
+            background: rgba(255,255,255,0.24);
+            margin: 16px 0 24px 0;
+        }
+
+        /* Footer buttons */
+        .footer {
+            background: rgba(0,0,0,0.85);
+            border-top: 0.5px solid rgba(255,255,255,0.1);
+            padding: 12px 16px;
+            display: flex;
+            gap: 16px;
+        }
+        .btn {
+            flex: 1;
+            padding: 14px 0;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 15px;
+            border: none;
+            background: none;
+        }
+        .btn-decline {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.7);
+        }
+        .btn-accept {
+            background: #00bcd4;
+            color: #000;
+            font-weight: bold;
+        }
+        .btn-accept:disabled {
+            background: #4a4a4a;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+        .btn-accept:active:not(:disabled) {
+            transform: scale(0.97);
+        }
+        .btn-decline:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="app">
+    <!-- Header: logo path set to your repo's assets/images/RJS.jpg -->
+    <div class="header">
+        <div class="logo">
+            <img src="RJS.jpg" alt="RJS Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/48?text=RJS';">
+        </div>
+        <div class="company-name">Rajputanajyoti system06 (opc) pvt. ltd</div>
+    </div>
+
+    <!-- Scrollable legal content -->
+    <div class="content-wrapper">
+        <div class="scroll-area" id="scrollArea">
+            <div id="legalContent"></div>
+            <div style="height: 1px;" id="bottomMarker"></div>
+        </div>
+    </div>
+
+    <!-- Footer Buttons -->
+    <div class="footer">
+        <button class="btn btn-decline" id="declineBtn">DECLINE</button>
+        <button class="btn btn-accept" id="acceptBtn" disabled>I ACCEPT</button>
+    </div>
+</div>
+
+<script>
+    // ---------------------- FULL LEGAL TEXT (MERGED FROM PREVIOUS FILES) ----------------------
+    const aboutCompanyText = `Rajputana Jyoti System (OPC) Pvt. Ltd. (RJS) is an Indian Deep‑Tech startup, officially registered on 18 February 2026 with the Ministry of Corporate Affairs (MCA). The Company is headquartered in Bhilwara District, Rajasthan, and operates from Jaipur. Founded and directed by Shiv Lal Salvi, RJS is built on the “Make in India” vision – to create a sovereign, secure, and globally competitive technology ecosystem originating from the grassroots of India. RJS focuses on research and development in artificial intelligence, advanced computing, privacy‑first architectures, and zero‑retention server infrastructure. The Company strictly avoids private shareholders or foreign investors, seeking only strategic alliances and grants from the Government of Rajasthan and the Central Government of India.`;
+
+    const aboutLogoText = `The official logo of Rajputana Jyoti System (RJS) incorporates the map of Rajasthan, honouring the land of Rajputs – a region known for valour, heritage, and now digital innovation. The name “Rajputana” refers to the historical name of Rajasthan, representing bravery and royal legacy. “Jyoti” means light or energy, symbolising the illuminating power of artificial intelligence that drives progress. “System” denotes the complete, integrated technological ecosystem that RJS is building – from AI software to future industrial hardware. The logo therefore signifies: “From the heart of Rajasthan, we bring the light of AI as a complete system to serve India and the world.”`;
+
+    const aboutProductText = `Jyoti Agent is the flagship multi‑modal AI assistant of Rajputana Jyoti System. Key capabilities:
+• Offline‑first & Wake Word support (planned updates) – enables local voice activation without continuous internet.
+• Cloudflare Edge Network for ultra‑low latency, DDoS protection, and secure data routing.
+• Zero‑server storage (Ephemeral Processing): RJS does NOT permanently store any user chat history, voice recordings, or uploaded files on its own servers. Data is processed in‑memory (RAM) and instantly deleted after the response is delivered.
+• Multi‑modal input: text, voice, images, PDFs, videos – processed via third‑party LLMs (Bhashini, Groq, Mistral, OpenRouter, etc.).
+• Smart Memory via Google Drive (drive.file scope): with user permission, Jyoti Agent stores contextual memory only in the user’s personal Google Drive – RJS never accesses any other files.
+• Privacy‑First: microphone, camera, and location permissions are used only for real‑time interactions and environmental data (weather/AQI) – no tracking, no permanent retention.`;
+
+    const tosText = `EFFECTIVE DATE: 26 APRIL 2026
+
+1. ACCEPTANCE & ELIGIBILITY: By using Jyoti Agent, you agree to these Terms. You must be at least 13 years old (13‑18 requires parental supervision). The Service is secular, unbiased, and not affiliated with any religion or political party.
+
+2. SERVICE NATURE: Jyoti Agent is an information and accessibility tool – it does NOT perform financial, autonomous, or mission‑critical tasks. The Service uses third‑party servers (Cloudflare, Bhashini, Groq, etc.). RJS acts only as a routing interface and is NOT the creator of underlying models.
+
+3. ACCOUNT SECURITY (SINGLE DEVICE BINDING): Your account is strictly bound to one unique device ID (UUID) at any given time. Simultaneous logins from multiple devices constitute a material breach resulting in immediate permanent suspension without notice.
+
+4. PROHIBITED USES (ZERO‑TOLERANCE): You shall not reverse engineer, decompile, scrape outputs to train other AI, create multiple accounts, or use the Service for unlawful activities, terrorism, fraud, cybercrime, spam, phishing, malware, deepfakes, election interference, or political misinformation. Violation = permanent account ban + referral to law enforcement.
+
+5. USER INPUT & RESPONSIBILITY: You retain ownership of your input but grant RJS a license to process it. You warrant that your input does not infringe any third‑party rights. Any illegal input may be logged for law enforcement.
+
+6. INTELLECTUAL PROPERTY: All RJS trademarks, logos, source code, and UI design are exclusive property of RJS. You receive a limited, non‑transferable license. AI‑generated output is machine‑generated and may not be subject to exclusive copyright.
+
+7. PAYMENTS & NO‑REFUND POLICY: All present or future payments (subscriptions, recharges) are 100% non‑refundable. No refunds for partial months, unused days, account suspension, or any other reason.
+
+8. TERMINATION: RJS may suspend or permanently delete your account at any time, without prior notice, for any violation of these Terms or if RJS believes your conduct is harmful.
+
+9. DISCLAIMER OF WARRANTIES: The Service is provided “AS IS” and “AS AVAILABLE” without any warranties of accuracy, uninterrupted access, or freedom from AI hallucinations. Not a substitute for professional advice (medical, legal, financial).
+
+10. LIMITATION OF LIABILITY: To the maximum extent permitted by Indian law, RJS, its founder, directors, employees, and agents shall NOT be liable for any indirect, incidental, special, or consequential damages. RJS’s total liability to you shall NEVER exceed the greater of (a) one month’s subscription fees paid by you, or (b) ₹100.
+
+11. INDEMNIFICATION: You agree to indemnify and hold RJS harmless against all claims, damages, legal fees, and expenses arising from your misuse of the Service or violation of these Terms.
+
+12. GOVERNING LAW & JURISDICTION: These Terms are governed by the laws of India. Exclusive Jurisdiction: Any dispute shall be brought solely in the Rajasthan High Court, Jaipur Bench, India. You waive any objection to venue.
+
+13. CLASS ACTION WAIVER: All claims must be brought individually – no class actions, consolidated actions, or representative proceedings.
+
+14. STATUTE OF LIMITATIONS: Any claim must be filed within one (1) year from the date the claim arose; otherwise it is permanently barred.
+
+15. HIGH‑STAKES USE BAN: Prohibited in military, weapons, nuclear facilities, life‑support systems, air traffic control, emergency medical surgery, high‑frequency trading, or any activity where failure could cause death or catastrophic harm.
+
+16. AUTOMATED SUSPENSION: RJS uses automated security systems. If the system detects API abuse, bot activity, or prohibited use, your account may be automatically and permanently suspended without human review.
+
+17. FORCE MAJEURE: RJS is not liable for delays or failures caused by events beyond its control, including third‑party API downtime, cyberattacks, natural disasters, or government actions.
+
+18. MODIFICATIONS: RJS may amend these Terms at any time. Continued use after notice constitutes acceptance.
+
+19. CONTACT: Legal notices: rajputanajyotisystem@rjs-06-opc.com. Address: Bhunas, Sahara, Gangapur, Bhilwara, Rajasthan – 311802, India.`;
+
+    const privacyText = `EFFECTIVE DATE: 26 APRIL 2026
+
+1. DATA WE COLLECT:
+   • Identity: Email, mobile number (with country code), name – for account creation, authentication, and sanctions screening.
+   • Device ID (UUID): Generated anonymously and linked to your account to enforce Single Device Binding and prevent fraud.
+   • Google Drive Access (drive.file scope): Optional. Used only to read/write Jyoti Agent’s Smart Memory files in your personal Google Drive. RJS NEVER accesses any other files (photos, emails, documents).
+   • Location: Used ephemerally only when you ask for weather or AQI. The location is fetched in real‑time, sent to a weather API, and immediately deleted – no tracking, no permanent storage.
+   • Microphone & Camera/Storage: Used for voice input and file uploads while you use the feature; data is processed via third‑party STT/LLM APIs and NOT retained after the response.
+
+2. EPHEMERAL PROCESSING – ZERO PERMANENT STORAGE: RJS operates a zero‑retention model: we have NO permanent storage servers for chat history, voice recordings, or uploaded files. Your input and the AI output are processed in RAM and are instantly and permanently deleted from our systems after the response is delivered.
+
+3. HOW WE USE DATA: To provide and secure the Service, enforce Terms (Single Device Binding, anti‑fraud), comply with Indian and international sanctions laws. We never sell, rent, or share your personal data with advertisers or third parties for independent purposes.
+
+4. DATA RETENTION: Account identifiers (email, mobile, name, UUID) are kept while your account is active plus a limited period for legal compliance. Google Drive Smart Memory is stored by Google under your account; you can delete it anytime. All other data is destroyed immediately after processing.
+
+5. SECURITY & LIABILITY DISCLAIMER: We use encryption (TLS 1.3) and Cloudflare DDoS protection. However, no Internet transmission is 100% secure. RJS shall NOT be liable for data leakage caused by compromise of your device, your Google account, or third‑party infrastructure (Google, Cloudflare, etc.).
+
+6. YOUR RIGHTS: You may revoke permissions (location, Google Drive, microphone) at any time via device settings – this may disable certain features. You may request account deletion by email; we will permanently erase your identifiers within 30 days.
+
+7. CHILDREN’S PRIVACY: Not for children under 13. No knowing collection.
+
+8. CHANGES TO THIS POLICY: We may update this Policy. Material changes will be notified in‑app. Continued use constitutes acceptance.
+
+9. CONTACT: Privacy requests: rajputanajyotisystem@rjs-06-opc.com.`;
+
+    // Helper to build a section
+    function buildSection(title, text) {
+        return `
+            <div class="section-title">${escapeHtml(title)}</div>
+            <div class="section-text">${escapeHtml(text).replace(/\n/g, '<br>')}</div>
+            <div class="divider"></div>
+        `;
+    }
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+
+    // Render all content
+    const container = document.getElementById('legalContent');
+    container.innerHTML = `
+        ${buildSection('ABOUT THE COMPANY & FOUNDER', aboutCompanyText)}
+        ${buildSection('ABOUT THE LOGO', aboutLogoText)}
+        ${buildSection('ABOUT JYOTI AGENT', aboutProductText)}
+        ${buildSection('GLOBAL TERMS OF SERVICE', tosText)}
+        ${buildSection('GLOBAL PRIVACY POLICY', privacyText)}
+    `;
+
+    // Scroll detection to enable Accept button
+    const scrollDiv = document.getElementById('scrollArea');
+    const acceptBtn = document.getElementById('acceptBtn');
+    const declineBtn = document.getElementById('declineBtn');
+
+    function checkBottom() {
+        if (!scrollDiv) return;
+        const scrollTop = scrollDiv.scrollTop;
+        const maxScroll = scrollDiv.scrollHeight - scrollDiv.clientHeight;
+        if (maxScroll <= 0) {
+            acceptBtn.disabled = false;
+            return;
+        }
+        const atBottom = scrollTop >= maxScroll - 2;
+        acceptBtn.disabled = !atBottom;
+    }
+
+    scrollDiv.addEventListener('scroll', checkBottom);
+    window.addEventListener('resize', checkBottom);
+    setTimeout(checkBottom, 100);
+
+    // Send message to Flutter WebView
+    function sendToFlutter(action) {
+        // For webview_flutter's JavaScript channel
+        if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage(JSON.stringify({ action: action }));
+        }
+        // As a fallback, you can also use a custom URL scheme
+        if (!window.ReactNativeWebView && window.parent && window.parent !== window) {
+            window.parent.postMessage({ type: action }, '*');
+        }
+    }
+
+    declineBtn.addEventListener('click', () => {
+        sendToFlutter('decline');
+    });
+
+    acceptBtn.addEventListener('click', () => {
+        if (acceptBtn.disabled) return;
+        sendToFlutter('accept');
+    });
+</script>
+</body>
+</html>
