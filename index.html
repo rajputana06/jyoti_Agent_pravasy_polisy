@@ -2,25 +2,25 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Jyoti Agent | Legal Agreement</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        body {
-            background-color: #000;
+        html, body {
+            background-color: #0A0E1A;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             color: #fff;
-            overflow: hidden;
-            height: 100vh;
+            height: 100%;
             width: 100%;
+            overflow: hidden;
         }
 
-        /* Background image with dark overlay */
         .bg {
             position: fixed;
             top: 0;
@@ -30,131 +30,148 @@
             background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            opacity: 0.25;
+            opacity: 0.20;
             z-index: -1;
         }
 
-        /* Main app container */
         .app {
-            height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            background-color: rgba(0,0,0,0.4);
-            backdrop-filter: blur(2px);
+            background-color: rgba(10, 14, 26, 0.7);
         }
 
-        /* Header with logo */
         .header {
-            padding: 12px 20px;
-            margin: 8px 16px 0 16px;
-            background: rgba(0,0,0,0.55);
-            border-radius: 60px;
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 0 20px rgba(0,255,255,0.25);
+            padding: 10px 16px;
+            margin: 10px 14px 4px 14px;
+            background: rgba(15, 23, 42, 0.75);
+            border-radius: 40px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
             display: flex;
             align-items: center;
-            gap: 16px;
-        }
-        .logo {
-            width: 48px;
-            height: 48px;
-            border-radius: 40px;
-            overflow: hidden;
-            background: #2c3e50;
+            gap: 12px;
             flex-shrink: 0;
         }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #1e293b;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
         .logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .company-name {
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
-            letter-spacing: 0.8px;
-            text-shadow: 0 0 12px rgba(0,255,255,0.6);
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: #ffffff;
         }
 
-        /* Scrollable glass card */
         .content-wrapper {
             flex: 1;
-            margin: 12px 16px;
-            border-radius: 32px;
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            margin: 8px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
             overflow: hidden;
-            backdrop-filter: blur(8px);
-            background: rgba(0,0,0,0.4);
+            background: rgba(15, 23, 42, 0.55);
+            position: relative;
         }
+
         .scroll-area {
             height: 100%;
-            overflow-y: auto;
-            padding: 24px;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            padding: 18px;
             scroll-behavior: smooth;
         }
 
-        /* Section styling */
         .section-title {
-            font-size: 22px;
+            font-size: 17px;
             font-weight: bold;
             color: #00e5ff;
-            letter-spacing: 0.8px;
-            margin-bottom: 12px;
-        }
-        .section-text {
-            font-size: 13.5px;
-            line-height: 1.5;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 16px;
-            white-space: pre-line;
-        }
-        .divider {
-            height: 1px;
-            background: rgba(255,255,255,0.24);
-            margin: 16px 0 24px 0;
+            letter-spacing: 0.6px;
+            margin-bottom: 8px;
         }
 
-        /* Footer buttons */
-        .footer {
-            background: rgba(0,0,0,0.85);
-            border-top: 0.5px solid rgba(255,255,255,0.1);
-            padding: 12px 16px;
-            display: flex;
-            gap: 16px;
+        .section-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.88);
+            margin-bottom: 14px;
+            white-space: pre-line;
         }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 14px 0 20px 0;
+        }
+
+        .scroll-hint {
+            text-align: center;
+            font-size: 12px;
+            color: #00e5ff;
+            padding: 10px;
+            background: rgba(0, 229, 255, 0.08);
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            background: rgba(10, 14, 26, 0.95);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 12px 14px;
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
         .btn {
             flex: 1;
-            padding: 14px 0;
-            border-radius: 30px;
-            font-weight: 600;
+            padding: 13px 0;
+            border-radius: 24px;
+            font-weight: bold;
             text-align: center;
             cursor: pointer;
             transition: 0.2s;
-            font-size: 15px;
+            font-size: 14px;
             border: none;
-            background: none;
         }
+
         .btn-decline {
             background: transparent;
-            border: 1px solid rgba(255,255,255,0.5);
-            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.8);
         }
+
         .btn-accept {
-            background: #00bcd4;
+            background: #00e5ff;
             color: #000;
-            font-weight: bold;
         }
+
         .btn-accept:disabled {
-            background: #4a4a4a;
-            color: #aaa;
+            background: #2a3447;
+            color: #64748b;
             cursor: not-allowed;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .btn-accept:active:not(:disabled) {
-            transform: scale(0.97);
-        }
+
+        .btn-accept:active:not(:disabled),
         .btn-decline:active {
             transform: scale(0.97);
         }
@@ -163,23 +180,21 @@
 <body>
 <div class="bg"></div>
 <div class="app">
-    <!-- Header: logo path set to your repo's assets/images/RJS.jpg -->
     <div class="header">
         <div class="logo">
-            <img src="sks.webp" alt="RJS Logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/48?text=RJS';">
+            <img src="sks.webp" alt="RJS Logo" onerror="this.onerror=null; this.src='https://huggingface.co/datasets/Shivlal6660/jyoti_assets/resolve/main/themes/rjs.webp';">
         </div>
-        <div class="company-name">Rajputanajyoti system06 (opc) pvt. ltd</div>
+        <div class="company-name">Rajputana Jyoti System 06 (OPC) Pvt. Ltd.</div>
     </div>
 
-    <!-- Scrollable legal content -->
     <div class="content-wrapper">
         <div class="scroll-area" id="scrollArea">
             <div id="legalContent"></div>
-            <div style="height: 1px;" id="bottomMarker"></div>
+            <div class="scroll-hint" id="scrollHint">कृपया नीचे तक पूरा स्क्रोल करें ताकि 'I ACCEPT' सक्रिय हो सके।</div>
+            <div style="height: 20px;"></div>
         </div>
     </div>
 
-    <!-- Footer Buttons -->
     <div class="footer">
         <button class="btn btn-decline" id="declineBtn">DECLINE</button>
         <button class="btn btn-accept" id="acceptBtn" disabled>I ACCEPT</button>
@@ -187,18 +202,17 @@
 </div>
 
 <script>
-    // ---------------------- FULL LEGAL TEXT (MERGED FROM PREVIOUS FILES) ----------------------
     const aboutCompanyText = `Rajputana Jyoti System (OPC) Pvt. Ltd. (RJS) is an Indian Deep‑Tech startup, officially registered on 18 February 2026 with the Ministry of Corporate Affairs (MCA). The Company is headquartered in Bhilwara District, Rajasthan, and operates from Jaipur. Founded and directed by Shiv Lal Salvi, RJS is built on the “Make in India” vision – to create a sovereign, secure, and globally competitive technology ecosystem originating from the grassroots of India. RJS focuses on research and development in artificial intelligence, advanced computing, privacy‑first architectures, and zero‑retention server infrastructure. The Company strictly avoids private shareholders or foreign investors, seeking only strategic alliances and grants from the Government of Rajasthan and the Central Government of India.`;
 
     const aboutLogoText = `The official logo of Rajputana Jyoti System (RJS) incorporates the map of Rajasthan, honouring the land of Rajputs – a region known for valour, heritage, and now digital innovation. The name “Rajputana” refers to the historical name of Rajasthan, representing bravery and royal legacy. “Jyoti” means light or energy, symbolising the illuminating power of artificial intelligence that drives progress. “System” denotes the complete, integrated technological ecosystem that RJS is building – from AI software to future industrial hardware. The logo therefore signifies: “From the heart of Rajasthan, we bring the light of AI as a complete system to serve India and the world.”`;
 
     const aboutProductText = `Jyoti Agent is the flagship multi‑modal AI assistant of Rajputana Jyoti System. Key capabilities:
-• Offline‑first & Wake Word support (planned updates) – enables local voice activation without continuous internet.
-• Cloudflare Edge Network for ultra‑low latency, DDoS protection, and secure data routing.
-• Zero‑server storage (Ephemeral Processing): RJS does NOT permanently store any user chat history, voice recordings, or uploaded files on its own servers. Data is processed in‑memory (RAM) and instantly deleted after the response is delivered.
-• Multi‑modal input: text, voice, images, PDFs, videos – processed via third‑party LLMs (Bhashini, Groq, Mistral, OpenRouter, etc.).
-• Smart Memory via Google Drive (drive.file scope): with user permission, Jyoti Agent stores contextual memory only in the user’s personal Google Drive – RJS never accesses any other files.
-• Privacy‑First: microphone, camera, and location permissions are used only for real‑time interactions and environmental data (weather/AQI) – no tracking, no permanent retention.`;
+- Offline‑first & Wake Word support (planned updates) – enables local voice activation without continuous internet.
+- Cloudflare Edge Network for ultra‑low latency, DDoS protection, and secure data routing.
+- Zero‑server storage (Ephemeral Processing): RJS does NOT permanently store any user chat history, voice recordings, or uploaded files on its own servers. Data is processed in‑memory (RAM) and instantly deleted after the response is delivered.
+- Multi‑modal input: text, voice, images, PDFs, videos – processed via third‑party LLMs (Bhashini, Groq, Mistral, OpenRouter, etc.).
+- Smart Memory via Google Drive (drive.file scope): with user permission, Jyoti Agent stores contextual memory only in the user’s personal Google Drive – RJS never accesses any other files.
+- Privacy‑First: microphone, camera, and location permissions are used only for real‑time interactions and environmental data (weather/AQI) – no tracking, no permanent retention.`;
 
     const tosText = `EFFECTIVE DATE: 26 APRIL 2026
 
@@ -265,7 +279,6 @@
 
 9. CONTACT: Privacy requests: rajputanajyotisystem@rjs-06-opc.com.`;
 
-    // Helper to build a section
     function buildSection(title, text) {
         return `
             <div class="section-title">${escapeHtml(title)}</div>
@@ -280,12 +293,9 @@
             if (m === '<') return '&lt;';
             if (m === '>') return '&gt;';
             return m;
-        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
-            return c;
         });
     }
 
-    // Render all content
     const container = document.getElementById('legalContent');
     container.innerHTML = `
         ${buildSection('ABOUT THE COMPANY & FOUNDER', aboutCompanyText)}
@@ -295,46 +305,51 @@
         ${buildSection('GLOBAL PRIVACY POLICY', privacyText)}
     `;
 
-    // Scroll detection to enable Accept button
     const scrollDiv = document.getElementById('scrollArea');
     const acceptBtn = document.getElementById('acceptBtn');
     const declineBtn = document.getElementById('declineBtn');
+    const scrollHint = document.getElementById('scrollHint');
 
     function checkBottom() {
         if (!scrollDiv) return;
         const scrollTop = scrollDiv.scrollTop;
         const maxScroll = scrollDiv.scrollHeight - scrollDiv.clientHeight;
-        if (maxScroll <= 0) {
+        
+        // 20px बफ़र दिया गया है ताकि मोबाइल पिक्सल स्केलिंग में अटके नहीं
+        if (maxScroll <= 20 || scrollTop >= (maxScroll - 20)) {
             acceptBtn.disabled = false;
-            return;
+            if (scrollHint) {
+                scrollHint.innerText = "✓ आपने नियम पढ़ लिए हैं। अब 'I ACCEPT' दबाएँ।";
+                scrollHint.style.color = "#4ade80";
+                scrollHint.style.background = "rgba(74, 222, 128, 0.1)";
+            }
         }
-        const atBottom = scrollTop >= maxScroll - 2;
-        acceptBtn.disabled = !atBottom;
     }
 
     scrollDiv.addEventListener('scroll', checkBottom);
     window.addEventListener('resize', checkBottom);
-    setTimeout(checkBottom, 100);
+    setTimeout(checkBottom, 300);
 
-    // Send message to Flutter WebView
-    function sendToFlutter(action) {
-        // For webview_flutter's JavaScript channel
-        if (window.ReactNativeWebView) {
+    // 🚀 Android Native Bridge कम्युनिकेशन
+    function dispatchAction(action) {
+        if (window.AndroidBridge) {
+            if (action === 'accept') {
+                window.AndroidBridge.acceptPolicy();
+            } else if (action === 'decline') {
+                window.AndroidBridge.declinePolicy();
+            }
+        } else if (window.ReactNativeWebView) {
             window.ReactNativeWebView.postMessage(JSON.stringify({ action: action }));
-        }
-        // As a fallback, you can also use a custom URL scheme
-        if (!window.ReactNativeWebView && window.parent && window.parent !== window) {
-            window.parent.postMessage({ type: action }, '*');
         }
     }
 
     declineBtn.addEventListener('click', () => {
-        sendToFlutter('decline');
+        dispatchAction('decline');
     });
 
     acceptBtn.addEventListener('click', () => {
         if (acceptBtn.disabled) return;
-        sendToFlutter('accept');
+        dispatchAction('accept');
     });
 </script>
 </body>
